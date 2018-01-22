@@ -15,11 +15,92 @@
  */
 package org.rennemann.minergate.api.models;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * The user's mining statistics.
  *
  * @author Travis Rennemann
  */
 public class UserMiningStat {
+
+    private double unconfirmedBalance;
+    private int minersCount;
+    private double hashrate;
+    private int hashrateRank;
+    private boolean minerOnline;
+    private List<MiningShare> shares = new ArrayList<>();
+
+    /**
+     * Construct.
+     */
+    public UserMiningStat() {
+    }
+
+    /**
+     * Construct.
+     *
+     * @param unconfirmedBalance
+     * @param minersCount
+     * @param hashrate
+     * @param hashrateRank
+     * @param minerOnline
+     */
+    public UserMiningStat(double unconfirmedBalance, int minersCount, double hashrate, int hashrateRank, boolean minerOnline) {
+        this.unconfirmedBalance = unconfirmedBalance;
+        this.minersCount = minersCount;
+        this.hashrate = hashrate;
+        this.hashrateRank = hashrateRank;
+        this.minerOnline = minerOnline;
+    }
+
+    public double getUnconfirmedBalance() {
+        return unconfirmedBalance;
+    }
+
+    public void setUnconfirmedBalance(double unconfirmedBalance) {
+        this.unconfirmedBalance = unconfirmedBalance;
+    }
+
+    public int getMinersCount() {
+        return minersCount;
+    }
+
+    public void setMinersCount(int minersCount) {
+        this.minersCount = minersCount;
+    }
+
+    public double getHashrate() {
+        return hashrate;
+    }
+
+    public void setHashrate(double hashrate) {
+        this.hashrate = hashrate;
+    }
+
+    public int getHashrateRank() {
+        return hashrateRank;
+    }
+
+    public void setHashrateRank(int hashrateRank) {
+        this.hashrateRank = hashrateRank;
+    }
+
+    public boolean isMinerOnline() {
+        return minerOnline;
+    }
+
+    public void setMinerOnline(boolean minerOnline) {
+        this.minerOnline = minerOnline;
+    }
+
+    public List<MiningShare> getShares() {
+        return shares;
+    }
+
+    public void setShares(List<MiningShare> shares) {
+        this.shares = shares;
+    }
 
 }

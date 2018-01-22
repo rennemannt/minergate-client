@@ -16,34 +16,10 @@
 package org.rennemann.minergate.api.models;
 
 /**
- * Successful login response.
+ * Abstract login response.
  *
  * @author Travis Rennemann
  */
-public class LoginResponseSuccess extends LoginResponse {
+public abstract class LoginResponse {
 
-    private String token;
-
-    /**
-     * Construct.
-     */
-    public LoginResponseSuccess() {
-    }
-
-    /**
-     * Construct.
-     *
-     * @param token The 2-factor authentication token
-     */
-    public LoginResponseSuccess(String token) {
-        this.token = token;
-    }
-
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
-    }
 }

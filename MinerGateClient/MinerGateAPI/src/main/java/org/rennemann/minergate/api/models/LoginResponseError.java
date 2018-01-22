@@ -20,7 +20,7 @@ package org.rennemann.minergate.api.models;
  *
  * @author Travis Rennemann
  */
-public class LoginResponseError {
+public class LoginResponseError extends LoginResponse {
 
     private String error;
     private String message;
